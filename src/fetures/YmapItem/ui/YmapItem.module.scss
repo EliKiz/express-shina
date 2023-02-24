@@ -1,0 +1,32 @@
+.YmapItem {
+    width: 30vw;
+}
+@media (max-width: 900px) {
+    .YmapItem {
+        width: 60vw;
+    }
+  }
+
+.Wrapper {
+    margin: 15px;
+    color: var(--secondary-color);
+    background-color: var(--bg-color);
+    cursor: pointer;
+
+}
+
+.Budgets {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.WrapperInfo {
+    padding: 10px;
+    background-color: var(-bg-color);
+}
+
+.active {
+    color: var(--inverted-secondary-color);
+    background-color: var(--inverted-active-bg-color)
+}
+

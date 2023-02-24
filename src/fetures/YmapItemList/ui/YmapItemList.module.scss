@@ -1,0 +1,28 @@
+.YmapItemBadgets { 
+   
+}
+.Map  {
+    width: 400px;
+    height: 400px;
+    margin-left: 5px;
+    
+}
+.BudgetsItem {
+    display: flex;
+    margin: 5px;
+    list-style-type: none
+}
+
+
+.Button {
+    padding: 0 7px;
+    color: vas(--secondary-color);
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: var(--inverted-active-bg-color);
+        transition: all 0.3s;
+    }
+}
