@@ -21,7 +21,6 @@ export const Ymap = ({ className, location, zoomLevel = 15 }: YmapProps) => {
                     arg1: { center: number[]; zoom: number }
                 ) => Promise<void>;
             }) => {
-                console.log(location, 'location')
                 const map = new maps.Map("yMap", {
                     center: location,
                     zoom: zoomLevel,

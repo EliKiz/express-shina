@@ -4,7 +4,6 @@ import { PageError } from 'widgets/PageError';
 // import { withTranslation } from 'react-i18next';
 
 interface ErrorBoundaruProps {
-    // ReactNode - любой React компонент
     children: ReactNode;
 }
 
@@ -19,12 +18,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaruProps, ErrorBoundarySta
     }
 
     static getDerivedStateFromError(error: Error) {
-        // Обновить состояние с тем, чтобы следующий рендер показал запасной UI.
         return { hasError: true };
     }
 
     componentDidCatch(error:Error, errorInfo:ErrorInfo) {
-        // Можно также сохранить информацию об ошибке в соответствующую службу журнала ошибок (логирование ошибок)
         console.log(error, errorInfo);
     }
 
@@ -33,7 +30,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaruProps, ErrorBoundarySta
         const { children } = this.props;
 
         if (hasError) {
-            // Можно отрендерить запасной UI произвольного вида
             return (
                 <Suspense fallback="">
                     <PageError />
@@ -44,6 +40,4 @@ class ErrorBoundary extends React.Component<ErrorBoundaruProps, ErrorBoundarySta
         return children;
     }
 }
-// Локализация для классовых компонентов - HOC
-// export default withTranslation()(ErrorBoundary);
 export default ErrorBoundary;

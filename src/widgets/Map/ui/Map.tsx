@@ -41,11 +41,6 @@ export const Map = ({ className, location, zoomLevel = 15 }: MapProps) => {
         [addresss]
     );
 
-    // useCallback(() => {
-
-    // }, [addresss])
-    // console.log("RERENDER", addresss);
-
     return (
         <>
             <YmapItem

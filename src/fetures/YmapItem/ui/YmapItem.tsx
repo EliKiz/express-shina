@@ -1,10 +1,8 @@
 import { YmapItemList } from "fetures/YmapItemList";
-import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { dataAddress } from "widgets/Map/ui/Map";
 
-import { ymapService } from "../service/YmapService";
 
 import cls from "./YmapItem.module.scss";
 
