@@ -23,7 +23,6 @@ export const Map = ({ className, location, zoomLevel = 15 }: MapProps) => {
     const [budgets, setBudgets] = useState<dataAddress[]>(() => []);
     const [addresss, setAddress] = useState<dataAddress>();
 
-
     useEffect(() => {
         ymapService("http://localhost:8000/pickPoints")
             .then((res) => setBudgets(res))
@@ -34,12 +33,9 @@ export const Map = ({ className, location, zoomLevel = 15 }: MapProps) => {
         return <Placemark geometry={[item.latitude, item.longitude]} />;
     });
 
-    const focusNewdAddress = useCallback(
-        (adr: dataAddress) => {
-            setAddress(adr);
-        },
-        [addresss]
-    );
+    const focusNewdAddress = (adr: dataAddress) => {
+        setAddress(adr);
+    };
 
     return (
         <>

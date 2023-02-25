@@ -3,7 +3,6 @@ import { useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { dataAddress } from "widgets/Map/ui/Map";
 
-
 import cls from "./YmapItem.module.scss";
 
 export interface YmapItem {
@@ -12,7 +11,7 @@ export interface YmapItem {
     focusNewdAddress: (adr: dataAddress) => void;
 }
 
-export const YmapItem = ({ className, data, focusNewdAddress }: YmapItem) => {
+export const YmapItem = ({ className, data, focusNewdAddress }: YmapItem) {
     const [selectedAddress, setSelectedAddress] = useState<dataAddress>();
     const handleSet = (address: dataAddress) => {
         setSelectedAddress({ ...address });
@@ -51,5 +50,6 @@ export const YmapItem = ({ className, data, focusNewdAddress }: YmapItem) => {
             {budgetsContent}
         </div>
     );
-};
+}
+
 
