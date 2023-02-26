@@ -11,7 +11,7 @@ export interface YmapItem {
     focusNewdAddress: (adr: dataAddress) => void;
 }
 
-export const YmapItem = ({ className, data, focusNewdAddress }: YmapItem) {
+export const YmapItem = ({ className, data, focusNewdAddress }: YmapItem) => {
     const [selectedAddress, setSelectedAddress] = useState<dataAddress>();
     const handleSet = (address: dataAddress) => {
         setSelectedAddress({ ...address });
